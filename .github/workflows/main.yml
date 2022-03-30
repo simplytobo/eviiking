@@ -24,6 +24,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
+      - name: step 1
+        run: echo "the api key is:${{secrets.SERVICEKEY}}"
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
