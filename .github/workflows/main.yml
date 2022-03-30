@@ -36,4 +36,4 @@ jobs:
           echo test, and deploy your project.
       - name: step 1
         ## Reference your environment variables
-        run: echo "The API key is:${{secrets.SERVICESECRET}}"   
+        run: echo "The API key is:${{secrets.SERVICEKEY}}"   
