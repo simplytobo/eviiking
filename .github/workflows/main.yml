@@ -15,6 +15,13 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  job1:
+    ## The type of runner that the job will run on
+    runs-on: ubuntu-latest 
+    steps:
+      - name: step 1
+        ## Reference your environment variables
+        run: echo "The API key is:${{secrets.API_KEY}}"  
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
@@ -25,7 +32,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
       - name: step 1
-        run: echo "the api key is:${{secrets.TEST}}"
+        run: echo "The API key is:${{secrets.API_KEY}}"
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
