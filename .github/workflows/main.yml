@@ -34,6 +34,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      - name: step 1
-        ## Reference your environment variables
-        run: echo "The API key is:${{secrets.SERVICEKEY}}"   
+      - name: create env file
+        run: |
+          touch .env
+          echo ENGINE_API_KEY=${{ secrets.SERVICEKEY }} >> .env
