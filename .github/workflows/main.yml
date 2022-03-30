@@ -37,6 +37,11 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: create env file
-        run: |
-          touch .env
-          echo serviceKey=${{ secrets.SERVICEKEY }} >> .env
+        env: # Or as an environment variable
+          super_secret: XXXX
+          
+        run: echo "key is:${{ env.super_secret}}"
+        #run: |
+          #touch .env
+         # echo serviceKey=${{ secrets.SERVICEKEY }} >> .env
+
