@@ -1,40 +1,31 @@
 const express = require('express');
-const app =  express();
-const ekool = require('ekool');
+const app = express();
 
-const { EKool } = require("/home/runner/eviiking/node_modules/ekool/lib/index");
+const cors = require('cors');
+app.use(cors({
+    origin: ['https://www.viiking.tk']
+}));
+
+const ekoolAuth = require("./routes/ekoolAuth.js")
+const scraper = require("./routes/scraper.js")
+const payment = require("./routes/payment.js")
+const {scrape, scrapeDocx} = require("./scraperOnTimer.js")
+//const request = require('request');
+
 
 app.use(express.static('public'));
+app.use(express.urlencoded({extended:false}));
+app.use(express.json());
 
 
-app.get('/', function(request, response) {
-  response.sendFile('index.html');
-});
+//scrape();
+//scrapeDocx();
+app.use("/ekool", ekoolAuth);
+app.use("/payments", payment);
 
-app.listen();
-
-
-
+app.use("/api", scraper);
 
 
-console.log(process.env['email']);
-console.log(process.env['password']);
-// Wrap in async function
-(async function () {
-
-  try {
-    
-    // Create new EKool instance
-    // It is possible to pass in authentication/refresh token if you have those
-    const ekool = new EKool(
-      await EKool.login(process.env['email'], process.env['password'])
-    );
-    // Retreive person data. This is necessary for running other commands
-    await ekool.getPersonData();
-    console.log(`Hello, ${ekool.personData.name1} ${ekool.personData.name2}!`);
-  } catch (err) {
-    console.error(err);
-  }
-})();
+app.listen(3000, () => console.log('server started on port 3000'));
 
 

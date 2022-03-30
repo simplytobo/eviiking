@@ -21,18 +21,26 @@
     <script src="javascriptFiles/rcrop.min.js"></script>
   
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="dark-mode.css" rel="stylesheet" type="text/css" />
 
 </head>
   <body class="dark-mode">
-
+    <section class="ekool-login hide">
+      <input placeholder="email" type="text" name="" id="email">
+      <input placeholder="password" type="text" name="" id="password">
+      <button id="logInEkool">Log in</button>
+      
+      </section>
+      
     <section class="screen">
       <section class="main-screen"> 
 
         <section class="home-screen" id="home-screen-id">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="var(--purple2)" fill-opacity="1" d="M0,288L1440,192L1440,0L0,0Z"></path>
-          </svg>
+          <div class="header-hue">
+          <img src="e-viikinglogo.png" class="viiking-logo">
+          </div>
+              
 
           <div class="cool-container">
               <div class="next-lesson-div">
@@ -58,16 +66,21 @@
               <var class="column-Item">14:55-15:40</var> -->
           </var> 
         </var>
-          
-        <div class="footer-menu">
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <span class="dot" id="profile-button-id"></span>
-        </div>
+
+
+        
 
         </section> 
+
+
+      <div class="footer-menu">
+          <div>
+              <input type="checkbox" class="checkbox" id="chk" />
+              <label class="label" for="chk">
+                <div class="ball"></div>
+              </label>
+            </div>
+          </div>
 
 
       </section>
@@ -80,5 +93,6 @@
     
   <script src="script.js"></script>
   <script src="lesson.js"></script>
+  <script src="themeSwitcher.js"></script>
   </body>
 </html>

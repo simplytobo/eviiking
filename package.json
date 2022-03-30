@@ -10,8 +10,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ekool": "^1.0.0",
+    "@supabase/supabase-js": "^1.30.0",
+    "any-text": "^1.2.0",
+    "axios": "^0.25.0",
+    "cheerio": "^1.0.0-rc.10",
+    "cors": "^2.8.5",
     "express": "^4.17.2",
-    "index.js": "0.0.3"
+    "image-charts": "^6.0.18",
+    "md5": "^2.3.0",
+    "node-schedule": "^2.1.0",
+    "request": "^2.88.2",
+    "stripe": "^8.212.0",
+    "word-extractor": "^1.0.4"
   }
 }

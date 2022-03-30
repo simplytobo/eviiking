@@ -1,0 +1,24 @@
+{
+  "files": {
+    "public/loginEkool.html": [
+      {
+        "id": "5447cb76-00e2-41d6-b6e4-b91a4af0eef6",
+        "line": 19,
+        "version": 142,
+        "index": 992
+      },
+      {
+        "id": "a9efd1c3-44e1-4e01-8320-4adf92a06680",
+        "line": 42,
+        "version": 142,
+        "index": 1790
+      },
+      {
+        "id": "a5cb0e43-885d-4ca4-af62-c69519ccdae7",
+        "line": 42,
+        "version": 142,
+        "index": 1790
+      }
+    ]
+  }
+}

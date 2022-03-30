@@ -1,8 +1,17 @@
+//const express = require('express');
+/* const { EKool } = import("/home/runner/eviiking/node_modules/ekool/lib/index");
+ console.log(Ekool); */
+
+
 monday0 = document.getElementById("day-id0");
 tuesday1 = document.getElementById("day-id1");
 wednesday2 = document.getElementById("day-id2");
 thursday3 = document.getElementById("day-id3");
 friday4 = document.getElementById("day-id4");
+
+email = document.getElementById("email");
+password = document.getElementById("password");
+logInEkool = document.getElementById("logInEkool");
 
 const lessons = [
 
@@ -122,10 +131,10 @@ const lessons = [
       classroom: "305"},
     lesson4:{
       lessonName:"Bioloogia",
-      classroom: "107"},
+      classroom: "105"},
     lesson5:{
       lessonName:"Kirjandus",
-      classroom: "107"},
+      classroom: "102"},
     lesson6:{
       lessonName:"C-Võõrkeel",
       classroom: "const-C-class"},
@@ -135,6 +144,14 @@ const lessons = [
 
   }}
 ];
+
+logInEkool.addEventListener('click', (e) => {
+   console.log("btn clicked");
+   logIn();
+    
+});
+
+
 
 var rowsWrapper = document.getElementById("rowsWrapper");
 
@@ -167,13 +184,13 @@ function timeLoop(){
       lessonduration = "08:00-8:45"      
     }
 
-    if (currentTime >= "08:01" && currentTime <= "08:55") {
+    if (currentTime >= "8:01" && currentTime <= "8:55") {
       console.log("Järgmine tund 2");
       dayLesson(dayNum, 2);
       lessonduration = "08:55-9:40"
     } 
 
-    if (currentTime >= "08:56" && currentTime <= "09:50") {
+    if (currentTime >= "8:56" && currentTime <= "9:50") {
       console.log("Järgmine tund 3");
       dayLesson(dayNum, 3);
       lessonduration = "09:50-10:35"
@@ -262,8 +279,6 @@ function insertTimeTable(){
     
     for(let a = 1; a < Object.keys(lessons[i].daysLessons).length+1; a++){
        
-     
-
       var columnItem = document.createElement("div");
       columnItem.classList.add("column-Item");
 
@@ -301,5 +316,23 @@ function dayLesson(dayNum, lessonNum){
 }
 console.log("dayNum");
 
+
+
+async function logIn() {
+
+  try {
+    
+    // Create new EKool instance
+    // It is possible to pass in authentication/refresh token if you have those
+    const ekool = new EKool(
+      await EKool.login(email.value,password.value)
+    );
+    // Retreive person data. This is necessary for running other commands
+    await ekool.getPersonData();
+    console.log("Hello, ${ekool.personData.name1} ${ekool.personData.name2}!");
+  } catch (err) {
+    console.error(err);
+  }
+}
 
 
