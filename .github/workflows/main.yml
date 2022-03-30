@@ -37,4 +37,4 @@ jobs:
       - name: create env file
         run: |
           touch .env
-          echo ENGINE_API_KEY=${{ secrets.SERVICEKEY }} >> .env
+          echo serviceKey=${{ secrets.SERVICEKEY }} >> .env
