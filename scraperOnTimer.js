@@ -12,7 +12,7 @@ schedule.scheduleJob('0 20 * * *', function(){
 const {
   createClient
 } = require('@supabase/supabase-js');
-const serviceKey = process.env['serviceKey'];
+const serviceKey = process.env['serviceKey'] || process.env.SERVICE_KEY ;
 const supabase = createClient(
   "https://tzayehrdabqfecpwtcpb.supabase.co",
   serviceKey

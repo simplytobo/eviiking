@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-
+require('dotenv').config();
 const cors = require('cors');
 app.use(cors({
     origin: ['https://www.viiking.tk']
@@ -23,9 +23,9 @@ app.use(express.json());
 app.use("/ekool", ekoolAuth);
 app.use("/payments", payment);
 
-app.use("/api", scraper);
+//app.use("/api", scraper);
 
-
-app.listen(3000, () => console.log('server started on port 3000'));
+const port = process.env.PORT || 3000
+app.listen(port, () => console.log(`server started on port ${port}`));
 
 

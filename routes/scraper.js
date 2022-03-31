@@ -1,12 +1,11 @@
-const cheerio = require("cheerio");
+/* const cheerio = require("cheerio");
 const axios = require("axios");
 const express = require("express");
 const router = express.Router();
 const { createClient } = require('@supabase/supabase-js') ;
-const supabaseSecret = process.env['serviceSecret'];
 const supabase = createClient(
   "https://tzayehrdabqfecpwtcpb.supabase.co",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTY0NDI1MTUwNywiZXhwIjoxOTU5ODI3NTA3fQ.mpynGhKKTaoMxQQU_VXU3FvmPSVVNin9kkcBCgW6TSI"
+  
 )
 
 
@@ -173,5 +172,5 @@ async function insertToSupa(timetable, classname){
 
 
 
-module.exports = router;
+module.exports = router; */
 
