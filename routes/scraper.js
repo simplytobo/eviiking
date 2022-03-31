@@ -4,6 +4,10 @@ const express = require("express");
 const router = express.Router();
 const { createClient } = require('@supabase/supabase-js') ;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+const supabaseSecret =  process.env['serviceKey'];
+>>>>>>> origin/main
 =======
 const supabaseSecret =  process.env['serviceKey'];
 >>>>>>> origin/main
