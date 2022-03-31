@@ -3,6 +3,10 @@ const axios = require("axios");
 const express = require("express");
 const router = express.Router();
 const { createClient } = require('@supabase/supabase-js') ;
+<<<<<<< HEAD
+=======
+const supabaseSecret =  process.env['serviceKey'];
+>>>>>>> origin/main
 const supabase = createClient(
   "https://tzayehrdabqfecpwtcpb.supabase.co",
   
