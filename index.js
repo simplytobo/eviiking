@@ -3,7 +3,7 @@ const app = express();
 require('dotenv').config();
 const cors = require('cors');
 app.use(cors({
-    origin: ['https://www.viiking.tk']
+    origin: ['https://www.viiking.tk','https://www.eviiking.tk' ]
 }));
 
 const ekoolAuth = require("./routes/ekoolAuth.js")
