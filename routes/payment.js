@@ -6,7 +6,7 @@ const stripe = require('stripe')('sk_test_51KIAF9BYMfSj1iRQN7NY75dkFWWPICzrWPEe8
 router.use(express.urlencoded({ extended: true }));
 router.use(express.json());
 
-const YOUR_DOMAIN = 'https://www.viiking.tk/';
+const YOUR_DOMAIN = 'https://www.eviiking.tk/';
 
 router.post('/create-checkout-session', async (req, res) => {
   const prices = await stripe.prices.list({
