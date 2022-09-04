@@ -6,29 +6,48 @@
 
   --background-color-dark: rgb(255, 255, 255);
 
-  --background-division: #ebebeb;
+  --background-division: #f2f5f8;
 
-  --purple: #44197c;
-  --purple2: #6139b1;
+  --background-division2: #6139b1;
+
+  --pfp-button: #a46afb;
+
+  --purple: #343434;
+/*   --purple2: #6139b1; */
+
+  --purple2: #2626265e;
+
+  --purple2dull: #a674f1;
 
   --font-color-low-contrast: #222831;
 
+  --font-color-low-contrast-white: #dadbdb;
+
+  --box-shadow-color: #b3b3b3;
+
   --font-color: #212429;
+
+  --font-color-gray:#6c6c6f;
 
 }
 
 .dark-mode {
-  --background-color: #222831;
-  --background-color-dark: #171b22;
+
+/*   --background-division: #292f38;
+
+  --background-division2: #292f38; */
+  --background-color: #1c1c1c;
+  --background-color-dark: #404040;
+  --box-shadow-color: #171b22;
   --background-hue: #495057;
-  --background-division: #292f38;
-
+  --background-division: #2828288a;
+  --background-division2: #28282861;
   --font-color: #f2f5f8;
-
   --font-color-low-contrast: #dadbdb;
-
-  --purple: #44197c;
-  --purple2: #7046be;
+  --font-color-low-contrast-white: #dadbdb;
+  --font-color-gray: #6c6c6f;
+  --purple: #343434;
+  --purple2: #2626265e;
 }
 
 body, html{
